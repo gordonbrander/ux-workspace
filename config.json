@@ -13,7 +13,6 @@
     "_": "underscore",
     "typogr": "typogr"
   },
-  "views": "./views",
   "markdown": {
     "smartLists": true,
     "smartypants": true
