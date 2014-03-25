@@ -22,10 +22,10 @@ Creating a new page/article
 ---------------------------
 
 Create a new file anywhere in the `contents/` folder. Name it with the
-appropriate file extension. We currently support:
+appropriate file extension. We currently have plugins for:
 
-* __Markdown__: `yourfile.md`
-* [Nunjucks](): `yourfile.html`
+* [Markdown](http://daringfireball.net/projects/markdown/): `yourfile.md`
+* [Nunjucks](http://jlongster.github.io/nunjucks/): `yourfile.html`
 
 Here's what a file should look like:
 
