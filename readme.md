@@ -9,6 +9,11 @@ install it:
 
     npm install -g wintersmith
 
+Then, you'll want to install the site dependencies:
+
+    cd ~/path/to/wintersmith-blog/
+    npm install
+
 You can write and preview your work locally:
 
     wintersmith preview
