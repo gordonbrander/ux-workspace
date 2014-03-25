@@ -6,8 +6,8 @@ Type system based on 9px vertical rhythm.
 
 html {
   background: #fff;
-  color: #444;
-  font: 21px/1.714285714 Georgia, serif;
+  color: #474747;
+  font: 21px/1.714285714 "Fira Sans OT", serif;
 }
 
 h1,
@@ -16,6 +16,9 @@ h3,
 h4,
 h5,
 h6 {
+  color: #777;
+  font-weight: 100;
+  font-style: italic;
   margin-bottom: 27px;
   margin-top: 54px;
 }
@@ -61,9 +64,17 @@ hr {
   margin: 54px 0;
 }
 
-/* Cinema
+img {
+  /* Fluid images trick. */
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Articles
 ----------------------------------------------------------------------------- */
 
-.section {
-  padding: 54px 0;
+.article {
+  padding-top: 54px;
+  padding-bottom: 54px;
 }

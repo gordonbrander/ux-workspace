@@ -7,7 +7,9 @@
 {% endblock %}
 
 {% block main %}
-  <div class="in section">
-    <div class="col-05">{{ typogr(page.html).typogrify() | safe }}</div>
-  </div>
+<div class="in">
+  <article class="article col-06 pre-03">
+    {{ page.html | safe }}
+  </article>  
+</div>
 {% endblock %}
