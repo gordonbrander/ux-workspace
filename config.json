@@ -1,0 +1,21 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "UX Workspace",
+    "owner": "",
+    "description": "Work and process from inside the halls of Mozilla"
+  },
+  "plugins": [
+    "wintersmith-nunjucks"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "views": "./views",
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  }
+}

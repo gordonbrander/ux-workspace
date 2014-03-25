@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/vendor/normalize.css">
+  <link rel="stylesheet" href="/assets/col.css">
+  <link rel="stylesheet" href="/assets/cinematic.css">
+{% endblock %}
+
+{% block main %}
+  <div class="in section">
+    <div class="col-05">{{ typogr(page.html).typogrify() | safe }}</div>
+  </div>
+{% endblock %}
