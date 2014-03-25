@@ -34,7 +34,7 @@ Here's what a file should look like:
     date: 2012-10-01 15:00
     template: cinematic.html
     ---
-s
+    
     My content goes here!
 
 Each file in Wintersmith requires a _head_ section (the bit between the `---`),
