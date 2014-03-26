@@ -27,10 +27,11 @@ Creating a new page/article
 ---------------------------
 
 Create a new file anywhere in the `contents/` folder. Name it with the
-appropriate file extension. We currently have plugins for:
+appropriate file extension. We currently have plugins installed for:
 
 * [Markdown](http://daringfireball.net/projects/markdown/): `yourfile.md`
 * [Nunjucks](http://jlongster.github.io/nunjucks/): `yourfile.html`
+* [Stylus](http://learnboost.github.io/stylus/): `yourfile.styl`
 
 Here's what a file should look like:
 
@@ -42,7 +43,7 @@ Here's what a file should look like:
     
     My content goes here!
 
-Each file in Wintersmith requires a _head_ section (the bit between the `---`),
+Templated files files require a _head_ section (the bit between the `---`),
 written [YAML-style](http://yaml.org/).
 
 All fields are optional except the `template` field. `template` tells
