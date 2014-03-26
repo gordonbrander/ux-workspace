@@ -3,7 +3,8 @@
     "moment": "2.x",
     "underscore": "1.4.x",
     "typogr": "0.5.x",
-    "wintersmith-nunjucks": "~0.4.1"
+    "wintersmith-nunjucks": "~0.4.1",
+    "wintersmith-stylus": "bendrucker/wintersmith-stylus"
   },
   "repository": "none"
 }

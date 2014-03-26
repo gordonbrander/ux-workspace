@@ -6,7 +6,8 @@
     "description": "Work and process from inside the halls of Mozilla"
   },
   "plugins": [
-    "wintersmith-nunjucks"
+    "wintersmith-nunjucks",
+    "wintersmith-stylus"
   ],
   "require": {
     "moment": "moment",
