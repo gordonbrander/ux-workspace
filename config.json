@@ -6,6 +6,7 @@
     "description": "Work and process from inside the halls of Mozilla"
   },
   "plugins": [
+    "./plugins/list-content.coffee",
     "wintersmith-nunjucks",
     "wintersmith-stylus"
   ],
