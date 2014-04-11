@@ -1,13 +1,93 @@
-/* Type
------------------------------------------------------------------------------
+/* Webfont
+----------------------------------------------------------------------------- */
 
-Type system based on 9px vertical rhythm.
-*/
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('firasansot-bold.woff') format('woff'),
+       url('firasansot-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('firasansot-bolditalic.woff') format('woff'),
+       url('firasansot-bolditalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('firasansot-light.woff') format('woff'),
+       url('firasansot-light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('firasansot-lightitalic.woff') format('woff'),
+       url('firasansot-lightitalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('firasansot-medium.woff') format('woff'),
+       url('firasansot-medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('firasansot-mediumitalic.woff') format('woff'),
+       url('firasansot-mediumitalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('firasansot-regular.woff') format('woff'),
+       url('firasansot-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('firasansot-regularitalic.woff') format('woff'),
+       url('firasansot-regularitalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/* Basics
+----------------------------------------------------------------------------- */
 
 html {
   background: #fff;
-  color: #474747;
-  font: 21px/1.714285714 "Fira Sans OT", serif;
+  color: #555;
+  font-family: "Fira Sans", sans-serif;
+}
+
+img {
+  /* Fluid images trick. */
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Type sizing @ 21px, 9px, 3px cadence
+----------------------------------------------------------------------------- */
+
+html {
+  font-size: 21px;
+  line-height: 1.571429; /* 33px */
 }
 
 h1,
@@ -16,59 +96,45 @@ h3,
 h4,
 h5,
 h6 {
-  color: #777;
-  font-weight: 100;
-  font-style: italic;
   margin-bottom: 27px;
   margin-top: 54px;
 }
 
 h1 {
   font-size: 36px;
-  line-height: 54px;
+  line-height: 54px;  
 }
 
 h2 {
   font-size: 30px;
-  line-height: 45px;
+  line-height: 45px;  
 }
 
 p,
 table {
   margin-bottom: 18px;
-  margin-top: 0;
+  margin-top: 0;  
 }
 
 ul,
 ol {
   margin-bottom: 18px;
-  margin-top: 0;
+  margin-top: 0;  
 }
 
 li ul,
-li ol {
+li ol {  
   margin-bottom: 0;
-  margin-top: 0;
 }
 
 li {
   margin-bottom: 9px;
-  margin-top: 9px;
-}
-
-blockquote {
-  margin: 18px;
+  margin-top: 9px;  
 }
 
 hr {
-  margin: 54px 0;
-}
-
-img {
-  /* Fluid images trick. */
-  max-width: 100%;
-  width: auto;
-  height: auto;
+  margin-bottom: 54px;
+  margin-top: 54px;   
 }
 
 /* Articles
