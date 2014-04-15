@@ -4,10 +4,13 @@
   <link rel="stylesheet" href="/vendor/normalize.css">
   <link rel="stylesheet" href="/assets/col.css">
   <link rel="stylesheet" href="/assets/site.css">
+  {% for url in page.metadata.styles %}
+    <link rel="stylesheet" href="{{ url }}">
+  {% endfor %}
 {% endblock %}
 
 {% block main %}
   <div class="in section">
-    <div class="col-05">{{ typogr(page.html).typogrify() | safe }}</div>
+    <div class="col-06">{{ typogr(page.html).typogrify() | safe }}</div>
   </div>
 {% endblock %}
