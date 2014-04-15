@@ -12,7 +12,20 @@
 {% block main %}
 <div class="in">
   <article class="article pre-01 col-06">
-    {{ page.html | safe }}
+    <header class="page-header">
+      <h1 class="article-title">{{ page.title }}</h1>
+      {% if page.metadata.synopsis %}
+        <div class="article-synopsis">{{ page.metadata.synopsis }}</div>
+      {% endif %}
+      {% if page.metadata.author %}
+        <div class="article-byline">
+          {{ page.metadata.author }}, {{ moment(page.date).format('MMMM D') }}
+        </div>
+      {% endif %}
+    </header>
+    <div class="article-main">
+      {{ page.html | safe }}
+    </div>
   </article>  
 </div>
 {% endblock %}
