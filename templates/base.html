@@ -16,6 +16,9 @@
     {% endblock %}
     {% block styles %}
       <link rel="stylesheet" href="/vendor/normalize.css">
+      {% for url in page.styles %}
+        <link rel="stylesheet" href="{{ url }}">
+      {% endfor %}
     {% endblock %}
   </head>
   <body>
@@ -27,6 +30,9 @@
   {% block footer %}
   {% endblock %}
   {% block scripts %}
+    {% for url in page.scripts %}
+      <script type="text/javascript" src="{{ url }}"></script>
+    {% endfor %}
   {% endblock %}
   </body>
 </html>
