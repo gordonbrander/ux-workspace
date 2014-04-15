@@ -16,10 +16,10 @@
     {% endblock %}
     {% block styles %}
       <link rel="stylesheet" href="/vendor/normalize.css">
-      {% for url in page.metadata.styles %}
-        <link rel="stylesheet" href="{{ url }}">
-      {% endfor %}
     {% endblock %}
+    {% for url in page.metadata.styles %}
+      <link rel="stylesheet" href="{{ url }}">
+    {% endfor %}
   </head>
   <body>
   {% block header %}
@@ -30,9 +30,9 @@
   {% block footer %}
   {% endblock %}
   {% block scripts %}
-    {% for url in page.metadata.scripts %}
-      <script type="text/javascript" src="{{ url }}"></script>
-    {% endfor %}
   {% endblock %}
+  {% for url in page.metadata.scripts %}
+    <script type="text/javascript" src="{{ url }}"></script>
+  {% endfor %}
   </body>
 </html>
