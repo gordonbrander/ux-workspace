@@ -1,26 +1,26 @@
-html {
+.theme-console {
   background: #262a2b;
   color: #a0dff1;
   font-weight: 100;
 }
 
-h1,
-h2,
-h3 {
+.theme-console h1,
+.theme-console h2,
+.theme-console h3 {
   font-weight: 100;
 }
 
-a {
+.theme-console a {
   color: #42b6cd;
   font-weight: 400;
   text-decoration: none;
 }
 
-a:hover {
+.theme-console a:hover {
   color: #2e7b95;
 }
 
-.article-title {
+.theme-console .article-title {
   color: #34ccfe;
   font-size: 72px;
   line-height: 81px;
@@ -28,70 +28,72 @@ a:hover {
   text-align: center;
 }
 
-.article-title i,
-.article-title em {
+.theme-console .article-title i,
+.theme-console .article-title em {
   color: #74e2fb;
   display: block;
   font-style: normal;
 }
 
-.article-synopsis {
+.theme-console .article-synopsis {
   color: #fff;
   font-size: 24px;
   margin: 45px 0;
 }
 
-.article-byline {
+.theme-console .article-byline {
   color: #656565;
 }
 
-.article-content h1,
-.article-content h2 {
+.theme-console .article-content h1,
+.theme-console .article-content h2 {
   color: #ffcc66;
 }
-.article-content h3,
-.article-content h4,
-.article-content h5,
-.article-content h6 {
+
+.theme-console .article-content h3,
+.theme-console .article-content h4,
+.theme-console .article-content h5,
+.theme-console .article-content h6 {
   color: #fb934c;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
   text-transform: uppercase;
 }
 
-.article-content blockquote {
+.theme-console .article-content blockquote {
   border-left: 1px dashed #656565;
   margin: 36px 0;
   padding-left: 18px;
 }
 
-.article-content blockquote cite {
+.theme-console .article-content blockquote cite {
   color: #ffcc66;
   display: block;
   font-style: italic;
 }
 
-.series {
+.theme-console .series {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
-.series-item > a,
-.series-item > span {
+.theme-console .series-item {
+  margin-bottom: 18px;
+}
+
+.theme-console .series-item > a,
+.theme-console .series-item > span {
   border-bottom: 3px solid #656565;
   display: block;
   color: #999;
   font-weight: 100;
   font-style: italic;
-  padding: 18px 0;
+  padding: 0 0 18px;
 }
 
-.series-item > a > i,
-.series-item > a > em,
-.series-item > span > i,
-.series-item > span > em {
+.theme-console .series-item > a > i,
+.theme-console .series-item > a > em,
+.theme-console .series-item > span > i,
+.theme-console .series-item > span > em {
   color: #656565;
   display: block;
   font-size: 14px;
@@ -100,10 +102,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-.series-activated > a {
+.theme-console .series-activated > a {
   color: #34ccfe;
   border-color: #34ccfe;
 }
-.series-activated > a > i {
+
+.theme-console .series-activated > a > i {
   color: #2e7b95;
 }

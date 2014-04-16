@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% block html_tag %}
-<html>
+<html {% if page.metadata.html_class %}class="{{ page.metadata.html_class }}"{% endif %}>
 {% endblock %}
   <head>
     {% block meta %}
