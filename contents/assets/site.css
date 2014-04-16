@@ -217,10 +217,25 @@ hr {
 
 }
 
-.hero {
-  background: #000;
+.hero,
+.hero-fullscreen {
+  background: #222;
   left: 50%;
   margin: 54px 0;
   position: relative;
   transform: translateX(-50%);
+}
+
+.hero-fullscreen {
+  background-size: cover;
+  /* Fallback for browsers that don't support vw and vh */
+  width: 800px;
+  height: 600px;
+}
+
+@supports (width: 100vw) {
+  .hero-fullscreen {
+    width: 100vw;
+    height: 100vw;
+  }
 }
