@@ -11,7 +11,10 @@
     {% endblock %}
     {% block title %}
       <title>
-        {% if page.title %}{{ page.title }} | {% endif %}{{ name }}
+        {% if page.title %}
+          {{ env.helpers.stripHtml(page.title) }} |
+        {% endif %}
+        {{ name }}
       </title>
     {% endblock %}
     {% block styles %}
