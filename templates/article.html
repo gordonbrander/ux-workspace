@@ -7,8 +7,28 @@
 {% endblock %}
 
 {% block body %}
+<ul class="series in">
+  <li class="series-item series-activated col-02 col-first pre-03">
+    <a href="#">
+      <i>Part one:</i>
+      The state of the web
+    </a>    
+  </li>
+  <li class="series-item col-02">
+    <span>
+      <i>Part two:</i>
+      The new Firefox OS
+    </span>    
+  </li>
+  <li class="series-item col-02">
+    <span>
+      <i>Part three:</i>
+      The making of
+    </span>    
+  </li>
+</div>
 <div class="in">
-  <article class="article pre-01 col-06">
+  <article class="article pre-03 col-06 col-first">
     <header class="page-header">
       <h1 class="article-title">{{ page.title }}</h1>
       {% if page.metadata.synopsis %}
