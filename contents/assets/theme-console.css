@@ -10,8 +10,21 @@ h3 {
   font-weight: 100;
 }
 
+a {
+  color: #42b6cd;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2e7b95;
+}
+
 .article-title {
   color: #34ccfe;
+  font-size: 72px;
+  line-height: 81px;
+  margin: 96px 0;
   text-align: center;
 }
 
@@ -24,6 +37,8 @@ h3 {
 
 .article-synopsis {
   color: #fff;
+  font-size: 24px;
+  margin: 45px 0;
 }
 
 .article-byline {
@@ -43,4 +58,52 @@ h3 {
   font-size: 18px;
   line-height: 27px;
   text-transform: uppercase;
+}
+
+.article-content blockquote {
+  border-left: 1px dashed #656565;
+  margin: 36px 0;
+  padding-left: 18px;
+}
+
+.article-content blockquote cite {
+  color: #ffcc66;
+  display: block;
+  font-style: italic;
+}
+
+.series {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.series-item > a,
+.series-item > span {
+  border-bottom: 3px solid #656565;
+  display: block;
+  color: #999;
+  font-weight: 100;
+  font-style: italic;
+  padding: 18px 0;
+}
+
+.series-item > a > i,
+.series-item > a > em,
+.series-item > span > i,
+.series-item > span > em {
+  color: #656565;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.series-activated > a {
+  color: #34ccfe;
+  border-color: #34ccfe;
+}
+.series-activated > a > i {
+  color: #2e7b95;
 }
