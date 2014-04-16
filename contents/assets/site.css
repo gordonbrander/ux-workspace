@@ -88,7 +88,7 @@ strong {
   font-weight: 600;
 }
 
-/* Type sizing @ 16px with 9px cadence
+/* Type sizing @ 14px with 9px cadence
 ----------------------------------------------------------------------------- */
 html {
   font-size: 14px;
@@ -102,7 +102,7 @@ h4,
 h5,
 h6 {
   margin-bottom: 18px;
-  margin-top: 54px;
+  margin-top: 36px;
 }
 
 h1 {
