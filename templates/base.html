@@ -27,12 +27,8 @@
     {% endblock %}
   </head>
   <body>
-  {% block header %}
-  {% endblock %}
-  {% block main %}
+  {% block body %}
     {{ typogr(page.html).typogrify() | safe }}
-  {% endblock %}
-  {% block footer %}
   {% endblock %}
   {% block scripts %}
   {% endblock %}
