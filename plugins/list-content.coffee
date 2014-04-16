@@ -1,36 +1,23 @@
 _ = require('underscore')
 
 
-compareFilesByFilename = (a, b) ->
+comparePagesByFilename = (a, b) ->
   ###
-  Compares filenames of each file object. Returns a sorting number.
+  Compares filenames of each page object. Returns a sorting number.
   ###
   a = a.getFilename()
   b = b.getFilename()
   if a < b then 1 else if a > b then -1 else 0
 
 
-compareFilesByDate = (a, b) ->
+comparePagesByDate = (a, b) ->
   ###
   Compares UNIX timestamps of each file object. Returns a sorting number.
+  Reverse Chron.
   ###
   a = a.date.getTime()
   b = b.date.getTime()
   if a > b then -1 else if a < b then 1 else 0
-
-
-###
-Is object a file object?
-We consider any object with a `getUrl` method to be a file object.
-###
-isFile = (object) -> object and object.getUrl?
-
-
-###
-Is file object not an index file?
-###
-isFileAndIsntIndex = (file) ->
-  isFile(file) and file.filepath.relative.search('index.') isnt -1
 
 
 id = (thing) -> thing
@@ -49,20 +36,34 @@ searcher = (pattern, a2b) ->
 
 ###
 Combine multiple predicates into a single predicate using an AND relationship.
+Returns a predicate function.
 ###
 all = (predicates...) -> (thing) ->
   rAll = (isPass, predicate) -> if isPass then predicate(thing) else false
   predicates.reduce(rAll, true)
 
 
+isntIndex = (page) -> page.filepath.relative.search('index.') is -1
+
+
+toFilepathRelative = (page) -> page.filepath.relative
+
+
+withPathMatching = (string) ->
+  all(isntIndex, searcher(RegExp(string), toFilepathRelative))
+
+
 ###
-Convenience function for sorting, slicing, filtering a list of file objects from
-a content tree. `contentTree` can be any tree object or any node of the content
-tree. Only immediate values of node are considered. Child nodes are ignored.
+Convenience function for sorting, slicing, filtering a list of page objects from
+a content tree. `contentTreeGroup` can be any sub-group of a content tree object.
+
+Example:
+
+    listPages(contents._.pages, isntIndex, compareByFilename, 0, 10)
 ###
-listContent = (contentTree, predicate, compare, start, end) ->
-  predicate = isFileAndIsntIndex unless predicate?
-  compare = compareFilesByDate unless compare?
+listPages = (contentTreeGroup, predicate, compare, start, end) ->
+  predicate = isntIndex unless predicate?
+  compare = comparePagesByDate unless compare?
   start = 0 unless start?
   end = Infinity unless end?
 
@@ -70,20 +71,20 @@ listContent = (contentTree, predicate, compare, start, end) ->
   # Filter out files we don't care about.
   # Sort the result.
   # Trim to range.
-  _.values(contentTree)
+  contentTreeGroup
     .filter(predicate)
     .sort(compare)
     .slice(start, end)
 
 
 plugin = (env, end) ->
-  env.helpers.listContent = listContent
+  env.helpers.listPages = listPages
   env.helpers.searcher = searcher
   env.helpers.all = all
-  env.helpers.isFile = isFile
-  env.helpers.isFileAndIsntIndex = isFileAndIsntIndex
-  env.helpers.compareFilesByFilename = compareFilesByFilename
-  env.helpers.compareFilesByDate = compareFilesByDate
+  env.helpers.isntIndex = isntIndex
+  env.helpers.comparePagesByFilename = comparePagesByFilename
+  env.helpers.comparePagesByDate = comparePagesByDate
+  env.helpers.withPathMatching = withPathMatching
   end()
 
 
