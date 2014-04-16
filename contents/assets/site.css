@@ -216,3 +216,11 @@ hr {
   }
 
 }
+
+.hero {
+  background: #000;
+  left: 50%;
+  margin: 54px 0;
+  position: relative;
+  transform: translateX(-50%);
+}
